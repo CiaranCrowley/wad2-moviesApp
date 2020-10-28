@@ -6,7 +6,7 @@ const MovieListPage = () => {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=5fa147ec86e7d7e772765237ebd42552&language=en-US&include_adult=false&page=1`
+      `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&include_adult=false&page=1`
     )
       .then(res => res.json())
       .then(json => {
