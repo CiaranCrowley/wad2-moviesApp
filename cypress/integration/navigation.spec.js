@@ -40,11 +40,11 @@ describe("Navigation", () => {
       cy.get("h2").contains("Favorite Movies");
       cy.get("nav").find("li").eq(1).find("a").click();
       cy.url().should("not.include", `/favorites`);
-      cy.get("h2").contains("No. Movies");
+      cy.get("h2").contains("Upcoming Movies");
       cy.get("nav").find("li").eq(2).find("a").click();
       cy.get("nav.navbar-brand").find("a").click();
       cy.url().should("not.include", `/favorites`);
-      cy.get("h2").contains("No. Movies");
+      cy.get("h2").contains("All Movies");
     });
   });
 
