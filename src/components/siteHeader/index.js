@@ -33,9 +33,9 @@ const SiteHeader = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <link className="nav-link text-white" to="/movies/upcomig">
+            <Link className="nav-link text-white" to="/movies/upcoming">
               Upcoming
-            </link>
+            </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link text-white" to="/movies/favorites">

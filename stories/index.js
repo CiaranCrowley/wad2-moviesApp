@@ -7,6 +7,7 @@ import MoviesHeader from "../src/components/headerMovieList";
 import MovieList from "../src/components/movieList";
 import MovieDetails from "../src/components/movieDetails";
 import MovieHeader from '../src/components/headerMovie'
+import UpcomingMovies from '../src/components/upcomingMovies';
 
 const sample = {
   adult: false,
@@ -115,4 +116,8 @@ storiesOf("Movie Details Page/MovieDetails", module).add("default", () => (
 
 storiesOf("Movie Details Page/MovieHeader", module).add("default", () => (
   <MovieHeader movie={sample} />
+));
+
+storiesOf("Upcoming Movies Details Page/UpcomingMovies", module).add("default", () => (
+  <UpcomingMovies movie={sample} />
 ));
