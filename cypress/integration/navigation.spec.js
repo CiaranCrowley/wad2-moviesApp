@@ -103,7 +103,6 @@ describe("Navigation", () => {
       cy.get("h2").contains("Favorite Movies");
       cy.get(".card").eq(0).find("img").click();
       cy.get("svg[data-icon=arrow-circle-left]").click();
-      //cy.url().should("not.include", `/movies`);
       cy.get("h2").contains("Favorite Movies");
     });
   });
