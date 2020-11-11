@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Redirect, Switch} from "react-router-dom" ;   // CHANGED
-import FavoriteMoviesPage from './pages/favoritesMoviesPage' ;      // NEW
+import { BrowserRouter, Route, Redirect, Switch} from "react-router-dom" ;
+import FavoriteMoviesPage from './pages/favoritesMoviesPage' ;
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import HomePage from "./pages/homePage";
 import MoviePage from './pages/movieDetailsPage';
@@ -10,7 +10,6 @@ import SiteHeader from './components/siteHeader';
 import UpcomingMoviesPage from "./pages/upcomingMoviesPage";
 import MoviesContextProvider from "./contexts/moviesContext";
 import GenresContextProvider from "./contexts/genresContext";
-import UpcomingMoviesContextProvider from "./contexts/upcomingMoviesContext"
 import AddMovieReviewPage from './pages/addMovieReviewPage';
 
 const App = () => {
@@ -21,7 +20,6 @@ const App = () => {
           <div className="container-fluid">
           <MoviesContextProvider>
             <GenresContextProvider>
-              <UpcomingMoviesContextProvider>
                   <Switch>
                     <Route exact path="/reviews/form" component={AddMovieReviewPage} />
                     <Route path="/reviews/:id" component={MovieReviewPage} />
@@ -31,7 +29,6 @@ const App = () => {
                     <Route path="/" component={HomePage} />
                     <Redirect from="*" to="/" />
                   </Switch>
-                </UpcomingMoviesContextProvider>
               </GenresContextProvider>
             </MoviesContextProvider>     
           </div>
