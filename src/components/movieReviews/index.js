@@ -8,9 +8,10 @@ export default ({ movie }) => {
 
   useEffect(() => {
     getMovieReviews(movie.id).then(reviews => {
-      setReviews(reviews);
+    setReviews(reviews);
     });
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
   return (
     <table className="table table-striped table-bordered table-hover">
       <thead>
